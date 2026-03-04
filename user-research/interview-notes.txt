@@ -1,0 +1,219 @@
+﻿Interview 1
+
+
+8-9 years of experience total, endurance 2-3ish years, weekly/monthly participation
+
+
+sprint races - full push at all times, pit late
+
+
+endurance races - Very dynamic, strategy depends on competition, significant data collected before the race in practice
+
+
+Tools: 
+Fuel usage - only small helper, not accurate, compactness/simplicity is good, hard to navigate, interaction problems (have to use mouse to adjust planned laps), use to calculate how much to fuel at pitstops/start, whether to LICO
+CMRT: Data quality problems in time deltas, (lap) time deltas confusing
+Map displays - Same uses as realtime (both are useful), cars are marked differently depending on class, leader, lapping vs lapped, minimap track shape can sometimes be misleading, not useful?
+Leaderboard - Rarely used, shows place in rankings, gap for position, last lap times, obsoleted by live timing website, driver identities are important for championship, human aspect, different driving styles
+        Purple/green sectors useful in qualifying, sticking to target times/consistency?, motivation/demotivation, not preferred to live deltas so Marvin doesn’t use sectors
+        Change in gap seems more important than the gap itself? This change is very important!
+Laptime Data - Fastest laptime can be a good motivator/benchmark?
+Tires - Data is ordinal? Shows pressure error, temperature (color, tri-color gradient)
+
+
+Real Penalty - Penalties, major track status (eg. FYC), cut warnings, long stops
+Realtime - Decide how to drive around other types of cars (raw numbers), better than map for spotter, smaller window of information (limited number of cars), realtime is for faster data ingestion (and thus used more often), driver identities are important, color encodes lapping vs lapped
+Live timing website - Crashes on track, requires second display
+
+
+looking for app in Assetto Corsa, people may have no secondary display, keep in mind additional computation power, looking for ease of setup
+
+
+Mentions use of audio communication, could be worth considering
+While not explicitly stated, it was implied in conversation that Marvin was comfortable with reading numbers while driving
+________________
+Interview 2 - Not big on strategy?
+
+
+Strategy: get expected fuel/lap time (per driver), estimate stint counts/length (pre-race), info kept in spreadsheet
+
+
+During the race: Pushing flat out typically works, relies on spreadsheet (all numeric), uses fuel use app for fuel target
+
+
+AC is limited in strategy options for cars, no over/undercuts because of lack of competition (and circuit dependent)
+
+
+More strategy promise in SCS - Know laptimes of gt3s, where they’re fast, uses relative app (lots of thinking required, likes the precision), keeps high/low speed corner pace difference in mind, also uses track map (Map Display - third party, not CMRT)
+
+
+Apps used: map display, standings (third party, retouch of relative, shows car type), tires (no room for improvement), telemetry
+
+
+Prefers ingame app to minimize resource usage and unable to see secondary screens
+Visual can be distracting compared to a number, resource usage is important!
+
+
+Live timing: Data quality issues, good when data is accurate, driver changes make things confusing? In the dark when there’s no screen sharing, use others lap times to determine how hard to push
+Interested in rolling average of lap times, accurate long stop counter
+Accounting for long stops: Do mental math of adding 2 minutes -> convert to 1 lap to get a ballpark of difference
+Prefers total information, no preference between table vs visualization if the vis doesn’t compromise data
+________________
+Interview 3
+
+
+Where you are, what your pace is, what you can do, very important
+
+
+Need fuel per lap -> calculate laps per stint
+
+
+Learn pitstop times (data input), what needs to get done at pitstop
+
+
+Given numbers, done in head
+
+
+Prefers distances as numeric for warning, not for strategy, numbers good for quick glances
+Numbers will always be more precise than any visualization
+
+
+Prefers something closer to the eyes, so in AC is ideal. Getting all data into AC obsoletes livetiming
+
+
+Is picky in terms of design quality/customizability
+
+
+Applications used:
+Uses online fuel calculator to get baseline, can only use before the race, gets you safe strategy, need to do mental math to adapt to new situations
+Livetiming: Good in concept, missing data in longstops, visualization is ok (slow/laggy at times), need to pay attention all the time, needs an engineer to read, impossible to read solo
+CMRT:
+Relative - Nice to have difference in gap instead of having to do mental math
+Standings - 
+Tires - 
+Doesn’t have historical laptimes, would like something like right side of GT7
+
+
+Fuel Calc (in-game) - Displays fuel on last lap, average between last 2 laps, current fuel, interpreted laps remaining, slider for telling fuel needed for certain number of laps, missing variance
+CBV version of fuel calc - Inaccurate, doesn’t use (but presentation is fine)
+
+
+Timing in-game is handled sector based?
+
+
+Drivers/cars use fuel differently -> Overcut/undercuts are unpredictable 
+Does pay attention to other teams pitstops and stints
+Pitstop strategies does affect driving style strategy (pace management)
+Examine other cars’ pace, laps per stint
+(Post interview)
+Likes to know track progress of each car
+Primarily cares about cars within 2 places
+Wants to keep minimap, happy to scrap overall track map
+________________
+Interview 4 - Happy to follow up
+
+
+Strategies are simple
+Lot to keep track of with many cars
+Safety cars change everything
+Default is to go full to empty
+
+
+Fuel Calculator - CBV, does mental math given liters per lap
+Longer stints can be up in the air because of data drift
+
+
+Had templated spreadsheet, input laptimes and fuel consumption to do math
+Likes doing the math themself to better understand it
+Still likes to manually update calculations over time
+App could inspire same confidence as manual calculation
+
+
+Wishes he had visualizations for endurance races for his streaming audience,
+gives them crowdsourced race engineers
+
+
+Sometimes uses pitstop to skip getting passed by LMPs (mainly in gt3, not faster classes)
+Pitting towards the end gives confidence in knowing position - Solvable pitfall
+Endurance racers don’t look at pitstop length/pitlane length, so having a vis of this info would significantly boost confidence
+Uses minimap to see prototypes coming (full track)
+Uses relative map in endurance alongside full track map
+Using minimap to predict is a tossup? Requires good intuition, could have some mental load taken off
+
+
+Uses the time on straights to think about strategy -> little time to think
+Discriminates between backmarker prototypes and frontrunners
+Desirable to know when cars are going to be battling
+
+
+Knowing what result you can get and not pushing too hard is important
+Multiclass makes in-class positions much more difficult to parse, nice to have inclass positions instead of/maybe accompanying overall position (moreso for who the leader is, probably a result of bias WRT drivers)
+
+
+External apps are popular but limit driver involvement, hybrid solution could be a good solution
+Look into F1 games for inspiration
+Should show whether driver is on pace/off pace for given strategy
+Physical printout of strategy brief could be nice, look into simhub integration
+Ingame app could take inspiration from MFD (F1 games?), crew chief, display pit window
+Strategy flexibility is important
+Realtime: Multiclass modes are required to cut down on info in endurance races, only care about relative/standings if battling
+Doesn’t care about standings in the race because it’s not accurate/(necessary?)
+Nice to select specific cars as competition
+Not necessary to calculate catching by hand unless you’re anticipating a battle
+Doesn’t think about competition/standings in the car
+Battle prediction/predicted position unlocks new strategy, too much work required to do by hand but automated system would be an advantage
+Trends over time are important
+LUA is better for performance, building visualizations
+Interested in how long your pitstops are compared to other cars
+RealPenalty people are overloaded with queries so don’t bother reaching out to them
+They also don’t want people messing with the protocol
+________________
+Interview 5
+
+
+Considers how many laps can be done
+Easy to misfill on pitstops
+Lots of math by hand/with calculator, excel spreadsheets
+Goes until fuel tank is empty in endurance
+SCS:
+Pit to try and avoid prototypes/faster class - Used sectors as reference and to find biggest pack, results were mixed (sometimes came in too early because of bad calculations), visualization that does heavy lifting on this strategy is highly desired
+Stay out until end - Maximize clean air
+Info wanted:
+Fuel consumption (prediction before race) -> fuel saving strategy
+Pace of competing cars
+Gaps to other cars - Relative? Looking for free air
+Goal - Depends on progress throughout the race? Beat the people ahead by position
+Typically wings it
+Doesn’t think about strategy too much, not interested in thinking about strategy because of mental load, needs focus for keeping car on track
+Rather prefers being told what to do, ensuring that strategy is still going strong
+Try and minimize information
+Prefers visual graphic over text/numbers to maximize use of peripheral vision?
+Afraid of getting tempted to look at a visualization at a bad time
+Prefers minimal change?
+Apps used:
+Radar - Cars alongside, no room for improvement
+Virtual Mirror - Also no room for improvement
+Tires - Mainly for temperature and degradation, can infer corner by corner how degradation is behaving
+Laptime - Last and best lap, better to compare between stints if data and vis tool is available
+Delta - Helps evaluate choice of racing line, identifying mistakes, motivated by success it shows, looks at it a lot (examines it on every corner exit), keeps it close to center of focus while driving to prevent getting too distracted by it (position of apps relative to center correlates with importance!), nothing to improve
+Realtime - Laptimes posted by other people, limited window of availability of data for that
+Relatives - Sometimes want larger driver window but other times a bigger window can be distracting, prefers text form (can’t imagine an alternative that doesn’t induce confusion), only examines on straights when they can change their focus
+Road/air temps, wind direction/speed, track grip
+Track Map (Small window, default one in AC)
+Sidekick - When to shift gears, tire pressure, 
+Fuel - sticks to laps remaining, with liters displayed there’s still a lot of mental math, not worried about changes in L / lap because driving style doesn’t change during race (even accounting for changes in fuel tank over time) and keeps a safety margin
+Pedal inputs - No input history, only current input, for identifying faulty input (mechanical or skill issue), only used during practice
+Position Leaderboard at bottom of screen - Where people are quick/slow in given sectors, which sector each car is in (substitute for track map that sacrifices accuracy, also tells if people are in pitlane via text), advantage of being able to interpret straightline speed (sector times give more info than last lap time), quick to parse (find car with 3 initials/car number)
+Track Description - Corner names, just for personal benefit and callouts
+
+
+Live Timing - Mixed Bag
+Great for getting some info - Number of laps completed (and since last pit), number of pitstops
+Other pieces of info (ping) are waste of space, current delta, top speed
+Some of this info may not be desired ingame because of concern of being overwhelmed
+Likes how everything is in a table, still easy to compare numeric values
+
+
+New app: Prefers both inside and outside simulator (situation dependent)
+Inside sim - Not limited by getting info from race engineer, more crowded
+Outside sim - Can have other people communicate info to you, less crowded
