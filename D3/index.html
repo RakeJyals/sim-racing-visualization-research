@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src = "https://d3js.org/d3.v6.js"></script>
+        <link rel = "stylesheet" href = "style.css">
+        
+        <title>Example Pitstop Strategy Visualizations</title>
+
+    </head>
+
+    <body>
+        
+        <!-- TODO CSS work (figure out why this doesn't work) -->
+        <header>
+            <div>
+                <h1>Title</h1>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/visualization-explanation/scroll.html">Explanation</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        
+        <div id = "chart"></div>
+        
+        <!-- Choose data to be displayed -->
+        <select name = "dataset" onchange = "load_data(this.selectedIndex);">
+            <option>Example Data 1</option>
+            <option>Example Data 2</option>
+            <option>Example Data 3</option>
+            <option>Example Data 4</option>
+        </select>
+
+        <script> // This script obj is used for declaring constants related to the display of html elements
+            // JSON file path
+            path_prefix = "./sample-data/"
+            path_suffix = ".csv"
+
+            line_width = 0.5
+        </script>
+
+        <script src = "./pitstop-vis.js"></script>
+    </body>
+</html>

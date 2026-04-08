@@ -1,0 +1,22 @@
+header {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #4B9CD3; /* Why doesn't this work? */
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
