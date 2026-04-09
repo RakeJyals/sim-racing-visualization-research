@@ -5,7 +5,7 @@
         <script src = "https://d3js.org/d3.v6.js"></script>
         <link rel = "stylesheet" href = "style.css">
         
-        <title>Example Pitstop Strategy Visualizations</title>
+        <title>Pitstop Strategy Visualizations</title>
 
     </head>
 
@@ -14,26 +14,28 @@
         <!-- TODO CSS work (figure out why this doesn't work) -->
         <header>
             <div>
-                <h1>Title</h1>
-                <ul>
+                <h1>Example Pitstop Strategy Visualizations</h1>
+                <!-- <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/visualization-explanation/scroll.html">Explanation</a></li>
-                </ul>
+                </ul> -->
             </div>
         </header>
         
         
         <div id = "chart">
             <svg>
-                <g id = "axis"></g>
-                <g id = "tails"></g>
                 <g id = "HY"></g>
                 <g id = "GT3"></g>
+                <g id = "axis"></g>
+                <g id = "tails"></g>
                 <g id = "pitstop-rect"><rect></rect></g>
+                <g id = "axis-label"><text></text></g>
             </svg>
         </div>
         
         <!-- Choose data to be displayed -->
+         <h2>Data Selector</h2>
         <select name = "dataset" onchange = "load_data(this.selectedIndex);">
             <option>Example Data 1</option>
             <option>Example Data 2</option>
