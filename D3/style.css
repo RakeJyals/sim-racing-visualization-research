@@ -20,3 +20,13 @@ ul li a {
     text-align: center;
     padding: 14px 16px;
 }
+
+#chart {
+    width: 100% - 20px;  /* TODO figure out how to center */
+    margin: 20px;
+    /* justify-content: center; */
+}
+
+svg {
+    width: 100%;
+}

@@ -23,7 +23,15 @@
         </header>
         
         
-        <div id = "chart"></div>
+        <div id = "chart">
+            <svg>
+                <g id = "axis"></g>
+                <g id = "tails"></g>
+                <g id = "HY"></g>
+                <g id = "GT3"></g>
+                <g id = "pitstop-rect"><rect></rect></g>
+            </svg>
+        </div>
         
         <!-- Choose data to be displayed -->
         <select name = "dataset" onchange = "load_data(this.selectedIndex);">
@@ -33,14 +41,32 @@
             <option>Example Data 4</option>
         </select>
 
-        <script> // This script obj is used for declaring constants related to the display of html elements
-            // JSON file path
-            path_prefix = "./sample-data/"
-            path_suffix = ".csv"
-
-            line_width = 0.5
-        </script>
+        <!-- <svg>
+            <g>
+                <circle r = 10 cx = 100 cy = 10 width = 10 height = 10 x = 0 y = 0></circle>
+                <rect r = 10 cx = 100 cy = 10 width = 10 height = 10 x = 0 y = 0></rect>
+            </g>
+        </svg> (Test to show that I can pass unused attributes to html elements without problem) -->
 
         <script src = "./pitstop-vis.js"></script>
+        
+        <script> // This script obj is used for declaring constants related to the display of html elements
+            // JSON file path
+            const path_prefix = "./sample-data/"
+            const path_suffix = ".csv"
+
+            const line_width = 2.5
+            const jitter_height = 45  // Is this just height?
+            const mark_radius = 4
+
+            const pitstop_length = 30
+
+            // const margin_width = 20
+            // const margin_height = 20
+
+
+            load_data(0)
+        </script>
+
     </body>
 </html>
