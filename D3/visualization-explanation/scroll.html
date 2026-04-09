@@ -1,8 +1,10 @@
+<!-- NOTE - This section is unused and likely to be deprecated, code taken from https://pudding.cool/process/introducing-scrollama/ -->
 <!DOCTYPE html>
 
 <html>
     <head>
         <script src = "https://d3js.org/d3.v6.js"></script>
+        <script src="https://unpkg.com/scrollama"></script>
         <link rel = "stylesheet" href = "style.css">
         
         <title>Building the Pitstop Strategy Visualization</title>
@@ -14,11 +16,38 @@
 
         <h1>Test</h1>
 
+        <section id = "scroll">
+            <div class = "graphic"> <!-- Chart -->
+                <div class = "chart">
+                    <svg>
+                        <image href = "old-vis-reference.png"></image>
+                    </svg>
+
+                </div>
+            </div>
+
+            <div class = "scroll-text"> <!-- Text that will be scrolled through -->
+                <div class = "step" data-step = "1">
+                    <h2>Original Visualization</h2>
+                    <p></p>
+
+                </div>
+                <div class = "step" data-step = "2">
+                    <h2>Abstracting the Track Map</h2>
+
+                </div>
+                <div class = "step" data-step = "3">
+                    <h2>Flattening the Circle</h2>
+
+                </div>
+            </div>
+        </section>
+
         <script> // This script obj is used for declaring constants related to the display of html elements
 
             line_width = 0.5
         </script>
 
-        <script src = "/visualization-explanation/scrollytelling.js"></script>
+        <script src = "scrollytelling.js"></script>
     </body>
 </html>
